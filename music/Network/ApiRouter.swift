@@ -36,7 +36,7 @@ enum DeezerEndPoints:APIConfiguration{
         case .searchTrack(let trackId):
             return "track/\(trackId)"
         case .search(let name):
-            return "search?q=\(name)"
+            return "search/track?q=\(name)"
         case .ArtistInfo(let artistId):
             return "artist/\(artistId)/top"
         case .AllGenere:

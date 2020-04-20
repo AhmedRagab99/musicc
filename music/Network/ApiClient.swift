@@ -30,6 +30,26 @@ class Api{
     
     
     
+    func search(let searchTerm:String,onSuccess:@escaping (SearchModel?,Error?)->Void){
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        AF.request("https://api.deezer.com/search/track?q=\(searchTerm)").responseJSON { (response) in
+            
+            if response.error == nil{
+                do {
+                    guard let data = response.data else {fatalError("data error")}
+                    //print(response.result)
+                    let search =  try! self.decoder.decode(SearchModel.self, from: data)
+                    onSuccess(search,nil)
+                    
+                } catch (let error) {
+                    print(error.localizedDescription)
+                    onSuccess(nil,error)
+                }
+            }
+        }
+    }
+    
     
     
     
