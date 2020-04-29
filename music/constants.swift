@@ -17,6 +17,11 @@ struct constant{
 }
 
 
+struct XIBS{
+    static let PlayerDetailView = "PlayerDetailView"
+}
+
+
 struct CellID {
-    static let serachCell = "serachCell"
+    static let SearchCell = "SearchCell"
 }

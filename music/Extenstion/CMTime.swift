@@ -1,14 +1,10 @@
-import Foundation
 import UIKit
 import AVKit
-
 extension CMTime{
-    
     func toDisplayString() -> String {
         if CMTimeGetSeconds(self).isNaN{
             return "__:__"
         }
-        
         let totalSeconds = Int(CMTimeGetSeconds(self))
         let seconds = totalSeconds % 60
         let minutes = totalSeconds % (60 * 60) / 60
@@ -17,5 +13,3 @@ extension CMTime{
         return timeFormatString
     }
 }
-
-
