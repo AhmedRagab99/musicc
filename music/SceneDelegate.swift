@@ -29,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func createSearchNC() -> UINavigationController {
         let searchVC        = SearchTracks()
         searchVC.title      = "Search"
-        searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
         
         let nav = UINavigationController(rootViewController: searchVC)
         nav.navigationBar.prefersLargeTitles = true
@@ -41,7 +41,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let favoritesListVC         = ViewController()
         favoritesListVC.title       = "Artists"
         
-        favoritesListVC.tabBarItem  = UITabBarItem(tabBarSystemItem: .recents, tag: 1)
+        favoritesListVC.tabBarItem  = UITabBarItem(tabBarSystemItem: .recents, tag: 0)
         
         let nav = UINavigationController(rootViewController: favoritesListVC)
                return nav
