@@ -91,36 +91,36 @@ class PlayerDetailView: UIViewController {
     }
     @IBOutlet weak var playPauseButton:UIButton!{
         didSet{
-            playPauseButton.setBackgroundImage(UIImage(systemName: "pause.fill"), for: .normal)
+            playPauseButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
             playPauseButton.addTarget(self, action: #selector(handlePlayPause) , for: .touchUpInside)
         }
     }
     @objc func handlePlayPause(){
         if player.timeControlStatus == .paused{
             player.play()
-            playPauseButton.setBackgroundImage(UIImage(systemName: "pause.fill"), for: .normal)
+            playPauseButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
             enlargeImageView()
             
         }else{
             player.pause()
-            playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
+            playPauseButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
             shrinkTrackImageView()
         }
         
     }
     
-    
-    
-    @IBAction func repeatButtonTapped(_ sender: UIButton) {
-            NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: .main) { (_) in
-                       self.player.seek(to: CMTime.zero)
-                       self.player.play()
-                   }
-            sender.tintColor = .systemPink
-            repeatState += 1
-            print(repeatState)
-        
-    }
+//
+//
+//    @IBAction func repeatButtonTapped(_ sender: UIButton) {
+//            NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: .main) { (_) in
+//                       self.player.seek(to: CMTime.zero)
+//                       self.player.play()
+//                   }
+//            sender.tintColor = .systemPink
+//            repeatState += 1
+//            print(repeatState)
+//
+//    }
     
     
     @IBAction func handleCurrentTimeSliderChange(_ sender: Any) {

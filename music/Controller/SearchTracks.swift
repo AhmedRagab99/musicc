@@ -125,8 +125,8 @@ class SearchTracks: UITableViewController,UISearchBarDelegate {
         
         let playerDetailsView = PlayerDetailView.initFromNib()
         playerDetailsView.track = Track
-        
         playerDetailsView.modalPresentationStyle = .fullScreen
+   
         self.present(playerDetailsView, animated: true, completion: nil)
     }
     

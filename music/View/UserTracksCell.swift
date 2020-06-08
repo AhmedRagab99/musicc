@@ -20,7 +20,7 @@ class UserTracksCell:UICollectionViewCell{
     fileprivate func stylizeUI() {
         nameLabel.text = "Podcast Name"
         nameLabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
-        nameLabel.minimumScaleFactor = 0.64
+        nameLabel.minimumScaleFactor = 0.58
         nameLabel.textColor = .label
         nameLabel.adjustsFontSizeToFitWidth = true
         artistNameLabel.text = "Artist Name"
@@ -51,7 +51,7 @@ class UserTracksCell:UICollectionViewCell{
              didSet {
                self.nameLabel.text = UserTrack?.title ?? ""
                 self.artistNameLabel.text = UserTrack?.artist?.name ?? ""
-                self.imageView.layer.cornerRadius = 5
+                self.imageView.layer.cornerRadius = 10
                 let urlString = UserTrack?.artist?.picture ?? ""
                  if let url = URL(string: urlString){
                      imageView.kf.indicatorType = .activity
