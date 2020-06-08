@@ -121,13 +121,16 @@ class SearchTracks: UITableViewController,UISearchBarDelegate {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let Track = self.searchArray[indexPath.item]
+        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        let mainTabBar = keyWindow?.rootViewController as? MainTabBar
+        mainTabBar?.maximizeDetailView(track: Track)
         
-        
-        let playerDetailsView = PlayerDetailView.initFromNib()
-        playerDetailsView.track = Track
-        playerDetailsView.modalPresentationStyle = .fullScreen
-   
-        self.present(playerDetailsView, animated: true, completion: nil)
+//
+//        let playerDetailsView = PlayerDetailView.initFromNib()
+//        playerDetailsView.track = Track
+//        playerDetailsView.modalPresentationStyle = .fullScreen
+//
+//        self.present(playerDetailsView, animated: true, completion: nil)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
