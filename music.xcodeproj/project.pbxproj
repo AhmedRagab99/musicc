@@ -14,7 +14,9 @@
 		D044EB0E2457A550002CEBF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D044EB0D2457A54F002CEBF9 /* Main.storyboard */; };
 		D04555AC244CE56F00216870 /* ApiConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04555AB244CE56F00216870 /* ApiConfiguration.swift */; };
 		D04555AE244CE65900216870 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04555AD244CE65900216870 /* ApiRouter.swift */; };
-		D0458D902459A472005735FB /* UserTracksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0458D8F2459A472005735FB /* UserTracksCell.swift */; };
+		D0458D902459A472005735FB /* allGenereCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0458D8F2459A472005735FB /* allGenereCell.swift */; };
+		D046F39124954D780021DE81 /* TopChartsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D046F38F24954D780021DE81 /* TopChartsVC.swift */; };
+		D046F39224954D780021DE81 /* ArtistDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D046F39024954D780021DE81 /* ArtistDetailVC.xib */; };
 		D04769E5244E2DE600DFF368 /* CMTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04769E4244E2DE600DFF368 /* CMTime.swift */; };
 		D04769E7244E2F2600DFF368 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04769E6244E2F2600DFF368 /* String.swift */; };
 		D047A64524574F470068A71C /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047A64424574F470068A71C /* MainTabBar.swift */; };
@@ -48,7 +50,9 @@
 		D044EB0D2457A54F002CEBF9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D04555AB244CE56F00216870 /* ApiConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfiguration.swift; sourceTree = "<group>"; };
 		D04555AD244CE65900216870 /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
-		D0458D8F2459A472005735FB /* UserTracksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTracksCell.swift; sourceTree = "<group>"; };
+		D0458D8F2459A472005735FB /* allGenereCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allGenereCell.swift; sourceTree = "<group>"; };
+		D046F38F24954D780021DE81 /* TopChartsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopChartsVC.swift; sourceTree = "<group>"; };
+		D046F39024954D780021DE81 /* ArtistDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistDetailVC.xib; sourceTree = "<group>"; };
 		D04769E4244E2DE600DFF368 /* CMTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTime.swift; sourceTree = "<group>"; };
 		D04769E6244E2F2600DFF368 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		D047A64424574F470068A71C /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
@@ -103,7 +107,9 @@
 				D09786FC244F3B5A00F49B26 /* SearchCell.xib */,
 				D044EB0924579140002CEBF9 /* PlayerDetailView.swift */,
 				D044EB0A24579140002CEBF9 /* PlayerDetailView.xib */,
-				D0458D8F2459A472005735FB /* UserTracksCell.swift */,
+				D0458D8F2459A472005735FB /* allGenereCell.swift */,
+				D046F38F24954D780021DE81 /* TopChartsVC.swift */,
+				D046F39024954D780021DE81 /* ArtistDetailVC.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -132,13 +138,13 @@
 			isa = PBXGroup;
 			children = (
 				D0967243244CEA2200EE9B36 /* TrackModel.swift */,
+				D0FDE937244E07810083505E /* SearchModel.swift */,
 				D096724F244CFAB100EE9B36 /* AlbumModel.swift */,
 				D0967251244CFF4400EE9B36 /* ArtistModel.swift */,
 				D0967253244D043300EE9B36 /* GenreModel.swift */,
 				D0967255244D060B00EE9B36 /* User.swift */,
 				D0967257244D090100EE9B36 /* UserTracks.swift */,
 				D0967259244D10F100EE9B36 /* Charts.swift */,
-				D0FDE937244E07810083505E /* SearchModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -164,11 +170,11 @@
 		D0D57524244B796400C778C2 /* music */ = {
 			isa = PBXGroup;
 			children = (
-				D042E8872458FD5E00ABD3F1 /* Controller */,
-				D04769E3244E2CCB00DFF368 /* Extenstion */,
-				D04769E1244E2C8D00DFF368 /* View */,
-				D071E0AD244C791B00A29DED /* Models */,
 				D071E0A6244C717F00A29DED /* Network */,
+				D04769E3244E2CCB00DFF368 /* Extenstion */,
+				D071E0AD244C791B00A29DED /* Models */,
+				D04769E1244E2C8D00DFF368 /* View */,
+				D042E8872458FD5E00ABD3F1 /* Controller */,
 				D0D57525244B796400C778C2 /* AppDelegate.swift */,
 				D0D57527244B796400C778C2 /* SceneDelegate.swift */,
 				D0D5752E244B796900C778C2 /* Assets.xcassets */,
@@ -257,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D046F39224954D780021DE81 /* ArtistDetailVC.xib in Resources */,
 				D044EB0C24579140002CEBF9 /* PlayerDetailView.xib in Resources */,
 				D044EB0E2457A550002CEBF9 /* Main.storyboard in Resources */,
 				D0D57532244B796900C778C2 /* LaunchScreen.storyboard in Resources */,
@@ -316,7 +323,7 @@
 			files = (
 				D04769E5244E2DE600DFF368 /* CMTime.swift in Sources */,
 				D0967258244D090100EE9B36 /* UserTracks.swift in Sources */,
-				D0458D902459A472005735FB /* UserTracksCell.swift in Sources */,
+				D0458D902459A472005735FB /* allGenereCell.swift in Sources */,
 				D0967256244D060B00EE9B36 /* User.swift in Sources */,
 				D0D5752A244B796400C778C2 /* SearchTracks.swift in Sources */,
 				D042E88B2459020700ABD3F1 /* ViewController.swift in Sources */,
@@ -332,6 +339,7 @@
 				D071E0AA244C721000A29DED /* constants.swift in Sources */,
 				D04769E7244E2F2600DFF368 /* String.swift in Sources */,
 				D04555AC244CE56F00216870 /* ApiConfiguration.swift in Sources */,
+				D046F39124954D780021DE81 /* TopChartsVC.swift in Sources */,
 				D044EB0B24579140002CEBF9 /* PlayerDetailView.swift in Sources */,
 				D0967252244CFF4400EE9B36 /* ArtistModel.swift in Sources */,
 				D0967254244D043300EE9B36 /* GenreModel.swift in Sources */,

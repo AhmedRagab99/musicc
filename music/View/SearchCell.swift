@@ -25,9 +25,7 @@ class SearchCell: UITableViewCell {
             self.trackTitle.text = track?.title ?? ""
               self.trackTitle.textColor = .label
             self.ArtistName.text = track?.artist?.name ?? ""
-              self.ArtistName.textColor = .secondaryLabel
-//            self.trackDate.text = "\(track?.rank ?? 3.5)"
-            
+              self.ArtistName.textColor = .secondaryLabel          
             let urlString =  track?.artist?.picture ?? ""
               if let url = URL(string: urlString){
                   trackImage.kf.indicatorType = .activity
@@ -36,6 +34,22 @@ class SearchCell: UITableViewCell {
               }
           }
       }
+    
+    
+    var album:SearchDatum?{
+        didSet{
+            self.trackTitle.text = album?.album?.title ?? ""
+              self.trackTitle.textColor = .label
+            self.ArtistName.text = album?.album?.releaseDate ?? ""
+              self.ArtistName.textColor = .secondaryLabel
+            let urlString =  album?.album?.cover ?? ""
+              if let url = URL(string: urlString){
+                  trackImage.kf.indicatorType = .activity
+                  let options : KingfisherOptionsInfo = [KingfisherOptionsInfoItem.transition(.fade(0.4))]
+                  trackImage.kf.setImage(with: .network(url), options: options)
+              }
+        }
+    }
     
     
     override func setSelected(_ selected: Bool, animated: Bool) {

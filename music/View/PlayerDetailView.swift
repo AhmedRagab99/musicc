@@ -229,7 +229,7 @@ class PlayerDetailView: UIViewController {
     
     @IBAction func handleCurrentTimeSliderChange(_ sender: Any) {
         let percentage  = currentTimeSlider.value
-        
+        panGesture.isEnabled = false
         guard let duration = player.currentItem?.duration else {return}
         
         let durationInSec = CMTimeGetSeconds(duration)
@@ -251,6 +251,7 @@ class PlayerDetailView: UIViewController {
     }
     
     @IBAction func handleVolumeChange(_ sender: UISlider) {
+        panGesture.isEnabled = false
         player.volume = sender.value
     }
     fileprivate func seekToCurrentTime (diff:Int64){

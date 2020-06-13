@@ -5,7 +5,6 @@ class MainTabBar:UITabBarController
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBar.tintColor = .systemPink
-        tabBar.barTintColor = .label
         UINavigationBar.appearance().prefersLargeTitles = true
         setupViewControllers()
         setupPlayerDetailVeiw()
@@ -70,6 +69,7 @@ class MainTabBar:UITabBarController
         })
     }
     
+    
     fileprivate func setupPlayerDetailVeiw(){
         
         
@@ -101,7 +101,7 @@ class MainTabBar:UITabBarController
         viewControllers = [
             generateNavigationController(for: SearchTracks(), title: "Search", image: #imageLiteral(resourceName: "music")),
             generateNavigationController(for: SearchTracks(), title: "Artists", image: #imageLiteral(resourceName: "music")),
-            generateNavigationController(for: ViewController(), title: "Downloads", image: #imageLiteral(resourceName: "music"))
+            generateNavigationController(for: ViewController(), title: "genere", image: #imageLiteral(resourceName: "music"))
         ]
     }
     
@@ -112,6 +112,7 @@ class MainTabBar:UITabBarController
         rootViewController.navigationItem.title = title
         navController.tabBarItem.title = title
         navController.tabBarItem.image = image
+        UINavigationBar.appearance().tintColor = .systemPink
         return navController
     }
 }

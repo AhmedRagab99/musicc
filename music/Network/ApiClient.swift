@@ -10,14 +10,14 @@ class Api{
     
     
     
-    func getTopCharts(genreId:Int,onSuccess:@escaping(Charts?,Error?)->Void){
+    func getTopCharts(genreId:Int,onSuccess:@escaping(SearchModel?,Error?)->Void){
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         AF.request(DeezerEndPoints.Charts(genreId)).responseJSON { (response) in
             if response.error == nil{
                 do {
                     guard let data = response.data else {fatalError("data error")}
                     //print(response.result)
-                    let chart =  try! self.decoder.decode(Charts.self, from: data)
+                    let chart =  try! self.decoder.decode(SearchModel.self, from: data)
                     onSuccess(chart,nil)
                     
                 } catch (let error) {
@@ -42,7 +42,7 @@ class Api{
                     let search =  try! self.decoder.decode(SearchModel.self, from: data)
                     onSuccess(search,nil)
                     
-                } catch (let error) {
+                }catch(let error) {
                     print(error.localizedDescription)
                     onSuccess(nil,error)
                 }
@@ -63,11 +63,11 @@ class Api{
             if response.error == nil{
                 do {
                     guard let data = response.data else {fatalError("data error")}
-                    print(response.result)
+                    //print(response.result)
                     let UsersTrack =  try! self.decoder.decode(UserTracks.self, from: data)
                     onSuccess(UsersTrack,nil)
                     
-                } catch (let error) {
+                }catch (let error) {
                     print(error.localizedDescription)
                     onSuccess(nil,error)
                 }
@@ -92,7 +92,7 @@ class Api{
                     let Users =  try! self.decoder.decode(User.self, from: data)
                     onSuccess(Users,nil)
                     
-                } catch (let error) {
+                }catch (let error) {
                     print(error.localizedDescription)
                     onSuccess(nil,error)
                 }
@@ -115,7 +115,7 @@ class Api{
                     let genres =  try! self.decoder.decode(GenreModel.self, from: data)
                     onSuccess(genres,nil)
                     
-                } catch (let error) {
+                }catch (let error) {
                     print(error.localizedDescription)
                     onSuccess(nil,error)
                 }
@@ -138,7 +138,7 @@ class Api{
                     let artists =  try! self.decoder.decode(Artist.self, from: data)
                     onSuccess(artists,nil)
                     
-                } catch (let error) {
+                }catch (let error) {
                     print(error.localizedDescription)
                     onSuccess(nil,error)
                 }
@@ -156,11 +156,11 @@ class Api{
             if response.error == nil{
                 do {
                     guard let data = response.data else {fatalError("data error")}
-                //    print(response.result)
+                    //    print(response.result)
                     let Tracks =  try! self.decoder.decode(TrackModel.self, from: data)
                     onSuccess(Tracks,nil)
                     
-                } catch (let error) {
+                }catch (let error) {
                     print(error.localizedDescription)
                     onSuccess(nil,error)
                 }
