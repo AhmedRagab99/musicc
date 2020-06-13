@@ -15,8 +15,8 @@
 		D04555AC244CE56F00216870 /* ApiConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04555AB244CE56F00216870 /* ApiConfiguration.swift */; };
 		D04555AE244CE65900216870 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04555AD244CE65900216870 /* ApiRouter.swift */; };
 		D0458D902459A472005735FB /* allGenereCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0458D8F2459A472005735FB /* allGenereCell.swift */; };
-		D046F39124954D780021DE81 /* TopChartsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D046F38F24954D780021DE81 /* TopChartsVC.swift */; };
-		D046F39224954D780021DE81 /* ArtistDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D046F39024954D780021DE81 /* ArtistDetailVC.xib */; };
+		D046F39B249599680021DE81 /* TopChartsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D046F399249599680021DE81 /* TopChartsVC.swift */; };
+		D046F39C249599680021DE81 /* TopChartsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D046F39A249599680021DE81 /* TopChartsVC.xib */; };
 		D04769E5244E2DE600DFF368 /* CMTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04769E4244E2DE600DFF368 /* CMTime.swift */; };
 		D04769E7244E2F2600DFF368 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04769E6244E2F2600DFF368 /* String.swift */; };
 		D047A64524574F470068A71C /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047A64424574F470068A71C /* MainTabBar.swift */; };
@@ -51,8 +51,8 @@
 		D04555AB244CE56F00216870 /* ApiConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfiguration.swift; sourceTree = "<group>"; };
 		D04555AD244CE65900216870 /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		D0458D8F2459A472005735FB /* allGenereCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allGenereCell.swift; sourceTree = "<group>"; };
-		D046F38F24954D780021DE81 /* TopChartsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopChartsVC.swift; sourceTree = "<group>"; };
-		D046F39024954D780021DE81 /* ArtistDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistDetailVC.xib; sourceTree = "<group>"; };
+		D046F399249599680021DE81 /* TopChartsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopChartsVC.swift; sourceTree = "<group>"; };
+		D046F39A249599680021DE81 /* TopChartsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopChartsVC.xib; sourceTree = "<group>"; };
 		D04769E4244E2DE600DFF368 /* CMTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTime.swift; sourceTree = "<group>"; };
 		D04769E6244E2F2600DFF368 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		D047A64424574F470068A71C /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
@@ -108,8 +108,8 @@
 				D044EB0924579140002CEBF9 /* PlayerDetailView.swift */,
 				D044EB0A24579140002CEBF9 /* PlayerDetailView.xib */,
 				D0458D8F2459A472005735FB /* allGenereCell.swift */,
-				D046F38F24954D780021DE81 /* TopChartsVC.swift */,
-				D046F39024954D780021DE81 /* ArtistDetailVC.xib */,
+				D046F399249599680021DE81 /* TopChartsVC.swift */,
+				D046F39A249599680021DE81 /* TopChartsVC.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -263,12 +263,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D046F39224954D780021DE81 /* ArtistDetailVC.xib in Resources */,
 				D044EB0C24579140002CEBF9 /* PlayerDetailView.xib in Resources */,
 				D044EB0E2457A550002CEBF9 /* Main.storyboard in Resources */,
 				D0D57532244B796900C778C2 /* LaunchScreen.storyboard in Resources */,
 				D09786FE244F3B5A00F49B26 /* SearchCell.xib in Resources */,
 				D0D5752F244B796900C778C2 /* Assets.xcassets in Resources */,
+				D046F39C249599680021DE81 /* TopChartsVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,12 +334,12 @@
 				D047A64524574F470068A71C /* MainTabBar.swift in Sources */,
 				D0D57526244B796400C778C2 /* AppDelegate.swift in Sources */,
 				D071E0AC244C76BA00A29DED /* Extenstion.swift in Sources */,
+				D046F39B249599680021DE81 /* TopChartsVC.swift in Sources */,
 				D0967242244CE8D400EE9B36 /* ApiClient.swift in Sources */,
 				D0967244244CEA2200EE9B36 /* TrackModel.swift in Sources */,
 				D071E0AA244C721000A29DED /* constants.swift in Sources */,
 				D04769E7244E2F2600DFF368 /* String.swift in Sources */,
 				D04555AC244CE56F00216870 /* ApiConfiguration.swift in Sources */,
-				D046F39124954D780021DE81 /* TopChartsVC.swift in Sources */,
 				D044EB0B24579140002CEBF9 /* PlayerDetailView.swift in Sources */,
 				D0967252244CFF4400EE9B36 /* ArtistModel.swift in Sources */,
 				D0967254244D043300EE9B36 /* GenreModel.swift in Sources */,
