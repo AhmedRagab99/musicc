@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class TopChartsVC: UIViewController {
+class ChartsTrack: UIViewController {
     
     var genereId:Int?
     var topTracks:[SearchDatum]?
@@ -29,16 +29,14 @@ class TopChartsVC: UIViewController {
     
     
     //MARK:- setup Functions
-    static func ArtistinitFromNib(generId:Int,image:String) -> TopChartsVC {
-        let player = TopChartsVC(nibName:XIBS.ArtistDetailVC, bundle: nil)
+    static func ArtistinitFromNib(generId:Int,image:String) -> ChartsTrack {
+        let player = ChartsTrack(nibName:XIBS.ArtistDetailVC, bundle: nil)
         player.genereId = generId
         player.imageUrl = image
         return player
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle{
-        return .lightContent
-    }
+    
     
     
     fileprivate func setupTableView(){
@@ -60,6 +58,8 @@ class TopChartsVC: UIViewController {
     
     
     //MARK: Outlets and IBActions
+
+    
     
     @IBOutlet weak var genereImageView: UIImageView!{
         didSet{
@@ -75,11 +75,10 @@ class TopChartsVC: UIViewController {
     }
     
     @IBOutlet weak var tableView: UITableView!
-    
 }
 
 
-extension TopChartsVC:UITableViewDelegate,UITableViewDataSource{
+extension ChartsTrack:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return topTracks?.count ?? 0
     }

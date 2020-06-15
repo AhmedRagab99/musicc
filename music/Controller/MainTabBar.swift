@@ -11,12 +11,6 @@ class MainTabBar:UITabBarController
     }
     
     
-    
-    
-    
-    
-    
-    
     let playerDetailView = PlayerDetailView.initFromNib()
     
     var maximizedTopAnchor:NSLayoutConstraint!
@@ -25,21 +19,19 @@ class MainTabBar:UITabBarController
     
     
     
-     func maximizeDetailView(track:SearchDatum?){
+    func maximizeDetailView(track:SearchDatum?){
         print(12312312)
         minimizedTopAnchor.isActive = false
         maximizedTopAnchor.isActive = true
         maximizedTopAnchor.constant = 0
         bottomAnchor.constant = 0
-        
-        
-        
+    
         if track != nil {
             playerDetailView.track = track
         }
-//        print(playerDetailView.track)
-//        print("////////////////////")
-//        print(track)
+        //        print(playerDetailView.track)
+        //        print("////////////////////")
+        //        print(track)
         UIView.animate(withDuration: 0.5,delay: 0,usingSpringWithDamping: 0.7,initialSpringVelocity: 1,options: .curveEaseOut,animations:  {
             
             self.view.layoutIfNeeded()
@@ -56,16 +48,16 @@ class MainTabBar:UITabBarController
         maximizedTopAnchor.isActive = false
         //        maximizedTopAnchor.constant = 0
         bottomAnchor.constant = view.frame.height
-
+        
         minimizedTopAnchor.isActive = true
-
+        
         UIView.animate(withDuration: 0.5,delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1,options: .curveEaseOut,animations:  {
             
             self.tabBar.transform = .identity
             self.view.layoutIfNeeded()
             self.playerDetailView.maximizeStackView.alpha = 0
             self.playerDetailView.miniplayerView.alpha = 1
-
+            
         })
     }
     
@@ -82,9 +74,9 @@ class MainTabBar:UITabBarController
         
         
         bottomAnchor = playerDetailView.view.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: view.frame.height)
-            bottomAnchor.isActive = true
-
-  
+        bottomAnchor.isActive = true
+        
+        
         
         minimizedTopAnchor = playerDetailView.view.topAnchor.constraint(equalTo: tabBar.topAnchor, constant: -64)
         playerDetailView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true

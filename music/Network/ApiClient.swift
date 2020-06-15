@@ -29,6 +29,26 @@ class Api{
     }
     
     
+    func getTopChartsArtist(genreId:Int,onSuccess:@escaping(ArtistModel?,Error?)->Void){
+           decoder.keyDecodingStrategy = .convertFromSnakeCase
+        AF.request("https://api.deezer.com/chart/\(genreId)/artists?limit=40").responseJSON { (response) in
+            
+            if response.error == nil{
+                do {
+                    guard let data = response.data else {fatalError("data error")}
+                    //print(response.result)
+                    let search =  try! self.decoder.decode(ArtistModel.self, from: data)
+                    onSuccess(search,nil)
+                    
+                }catch(let error) {
+                    print(error.localizedDescription)
+                    onSuccess(nil,error)
+                }
+            }
+        }
+       }
+    
+    
     
     func search(let searchTerm:String,onSuccess:@escaping (SearchModel?,Error?)->Void){
         decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -57,14 +77,34 @@ class Api{
     
     
     
-    func getUserTracks(userId:Int,onSuccess:@escaping(UserTracks?,Error?)->Void){
+    func getUserTracks(userId:Int,onSuccess:@escaping(SearchModel?,Error?)->Void){
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         AF.request(DeezerEndPoints.UserTracks(userId)).responseJSON { (response) in
             if response.error == nil{
                 do {
                     guard let data = response.data else {fatalError("data error")}
-                    //print(response.result)
-                    let UsersTrack =  try! self.decoder.decode(UserTracks.self, from: data)
+                    print(response.result)
+                    let UsersTrack =  try! self.decoder.decode(SearchModel.self, from: data)
+                    onSuccess(UsersTrack,nil)
+                    
+                }catch (let error) {
+                    print(error.localizedDescription)
+                    onSuccess(nil,error)
+                }
+            }
+        }
+    }
+    
+    
+    
+    func getArtistTopTracks(artistId:Int,onSuccess:@escaping(SearchModel?,Error?)->Void){
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        AF.request("https://api.deezer.com/artist/\(artistId)/top?limit=50").responseJSON { (response) in
+            if response.error == nil{
+                do {
+                    guard let data = response.data else {fatalError("data error")}
+                    print(response.result)
+                    let UsersTrack =  try! self.decoder.decode(SearchModel.self, from: data)
                     onSuccess(UsersTrack,nil)
                     
                 }catch (let error) {
@@ -81,18 +121,17 @@ class Api{
     
     
     
-    
     func getUser(userId:Int,onSuccess:@escaping(User?,Error?)->Void){
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         AF.request(DeezerEndPoints.currentUser(userId)).responseJSON { (response) in
-            if response.error == nil{
+            if response.error == nil {
                 do {
                     guard let data = response.data else {fatalError("data error")}
                     print(response.result)
-                    let Users =  try! self.decoder.decode(User.self, from: data)
+                    let Users =  try? self.decoder.decode(User.self, from: data)
                     onSuccess(Users,nil)
                     
-                }catch (let error) {
+                } catch (let error) {
                     print(error.localizedDescription)
                     onSuccess(nil,error)
                 }
@@ -128,14 +167,14 @@ class Api{
     
     
     
-    func getArtistInfo(let artistId:Int,onSuccess:@escaping(Artist?,Error?)->Void){
+    func getArtistInfo(userId:Int,onSuccess:@escaping(ArtistModel?,Error?)->Void){
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        AF.request(DeezerEndPoints.ArtistInfo(artistId)).responseJSON { (response) in
+        AF.request(DeezerEndPoints.UserArtist(userId)).responseJSON { (response) in
             if response.error == nil{
                 do {
                     guard let data = response.data else {fatalError("data error")}
                     print(response.result)
-                    let artists =  try! self.decoder.decode(Artist.self, from: data)
+                    let artists =  try! self.decoder.decode(ArtistModel.self, from: data)
                     onSuccess(artists,nil)
                     
                 }catch (let error) {
@@ -146,31 +185,5 @@ class Api{
         }
     }
     
-    
-    
-    
-    
-    func searchTrack(let trackId:Int,onSuccess:@escaping(TrackModel?,Error?)->Void){
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        AF.request(DeezerEndPoints.searchTrack(trackId)).responseJSON { (response) in
-            if response.error == nil{
-                do {
-                    guard let data = response.data else {fatalError("data error")}
-                    //    print(response.result)
-                    let Tracks =  try! self.decoder.decode(TrackModel.self, from: data)
-                    onSuccess(Tracks,nil)
-                    
-                }catch (let error) {
-                    print(error.localizedDescription)
-                    onSuccess(nil,error)
-                }
-            }
-        }
-    }
-    
-    
-    
 }
-
-
 

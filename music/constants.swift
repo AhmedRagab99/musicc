@@ -19,7 +19,7 @@ struct constant{
 
 struct XIBS{
     static let PlayerDetailView = "PlayerDetailView"
-    static let ArtistDetailVC  = "TopChartsVC"
+    static let ArtistDetailVC  = "ChartsTrack"
 }
 
 
