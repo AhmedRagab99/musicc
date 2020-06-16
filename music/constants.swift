@@ -20,9 +20,11 @@ struct constant{
 struct XIBS{
     static let PlayerDetailView = "PlayerDetailView"
     static let ArtistDetailVC  = "ChartsTrack"
+    static let ArtistCell = "ArtistCell"
 }
 
 
 struct CellID {
     static let SearchCell = "SearchCell"
+    static let ArtistCell = "ArtistCell"
 }

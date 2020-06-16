@@ -3,7 +3,7 @@ import Kingfisher
 
 class allGenereCell:UICollectionViewCell{
     
-    let imageView = UIImageView(image: #imageLiteral(resourceName: "test"))
+    let imageView = UIImageView()
     let nameLabel = UILabel()
     
     
@@ -17,20 +17,22 @@ class allGenereCell:UICollectionViewCell{
     
     //MARK:- style UI
     fileprivate func stylizeUI() {
-        nameLabel.text = "Podcast Name"
-        nameLabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
-        nameLabel.minimumScaleFactor = 0.58
-        nameLabel.textColor = .label
-        nameLabel.adjustsFontSizeToFitWidth = true
+        nameLabel.tintColor = .secondaryLabel
+        nameLabel.backgroundColor = .systemBackground
+        nameLabel.font = UIFont.preferredFont(forTextStyle: .title2)
        
     }
     
     fileprivate func setupViews() {
-        imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor).isActive = true
         
         let stackView = UIStackView(arrangedSubviews: [imageView, nameLabel])
         
+        stackView.backgroundColor = .systemBackground
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        nameLabel.textAlignment = .center
         stackView.axis = .vertical
+        stackView.spacing = 4
         // enables auto layout
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -48,7 +50,7 @@ class allGenereCell:UICollectionViewCell{
         didSet {
             
             self.nameLabel.text = allGenere?.name
-            self.imageView.layer.cornerRadius = 15
+            self.imageView.layer.cornerRadius = 10
             guard let urlString = allGenere?.picture else { return  }
             if let url = URL(string: urlString){
                 imageView.kf.indicatorType = .activity
@@ -56,6 +58,20 @@ class allGenereCell:UICollectionViewCell{
                 imageView.kf.setImage(with: .network(url), options: options)
                 
             }
+        }
+    }
+    
+    
+    
+    func setupCell(artist:Artist){
+        
+        self.nameLabel.text = artist.name ?? ""
+        imageView.layer.cornerRadius = 15
+        guard let urlString = artist.picture else { return  }
+        if let url = URL(string: urlString){
+            imageView.kf.indicatorType = .activity
+            let options : KingfisherOptionsInfo = [KingfisherOptionsInfoItem.transition(.fade(0.2))]
+            imageView.kf.setImage(with: .network(url), options: options)
         }
     }
     required init?(coder aDecoder: NSCoder) {

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8B8265B369371333C9102AF8 /* Pods_music.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943C4D855FBE902DD896D35F /* Pods_music.framework */; };
+		D01029072497F550001C78BC /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01029062497F550001C78BC /* HomeVC.swift */; };
+		D010290924980CFD001C78BC /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = D010290824980CFD001C78BC /* Header.swift */; };
 		D042E88B2459020700ABD3F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042E88A2459020700ABD3F1 /* ViewController.swift */; };
 		D044EB0B24579140002CEBF9 /* PlayerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044EB0924579140002CEBF9 /* PlayerDetailView.swift */; };
 		D044EB0C24579140002CEBF9 /* PlayerDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D044EB0A24579140002CEBF9 /* PlayerDetailView.xib */; };
@@ -40,6 +42,8 @@
 		88483A402CB5E9DE5B5976E8 /* Pods-music.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-music.debug.xcconfig"; path = "Target Support Files/Pods-music/Pods-music.debug.xcconfig"; sourceTree = "<group>"; };
 		943C4D855FBE902DD896D35F /* Pods_music.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_music.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6FEEFA32B26C9A3C3E9CE3 /* Pods-music.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-music.release.xcconfig"; path = "Target Support Files/Pods-music/Pods-music.release.xcconfig"; sourceTree = "<group>"; };
+		D01029062497F550001C78BC /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		D010290824980CFD001C78BC /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		D042E88A2459020700ABD3F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D044EB0924579140002CEBF9 /* PlayerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailView.swift; sourceTree = "<group>"; };
 		D044EB0A24579140002CEBF9 /* PlayerDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerDetailView.xib; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 				D042E88A2459020700ABD3F1 /* ViewController.swift */,
 				D047A64424574F470068A71C /* MainTabBar.swift */,
 				D0D57529244B796400C778C2 /* SearchTracks.swift */,
+				D01029062497F550001C78BC /* HomeVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -99,9 +104,10 @@
 				D09786FC244F3B5A00F49B26 /* SearchCell.xib */,
 				D044EB0924579140002CEBF9 /* PlayerDetailView.swift */,
 				D044EB0A24579140002CEBF9 /* PlayerDetailView.xib */,
-				D0458D8F2459A472005735FB /* allGenereCell.swift */,
 				D085583E24971E9F0029E0C1 /* ChartsTrack.xib */,
 				D0855840249720340029E0C1 /* ChartsTrack.swift */,
+				D010290824980CFD001C78BC /* Header.swift */,
+				D0458D8F2459A472005735FB /* allGenereCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -317,12 +323,14 @@
 				D0FDE938244E07810083505E /* SearchModel.swift in Sources */,
 				D0967250244CFAB100EE9B36 /* AlbumModel.swift in Sources */,
 				D047A64524574F470068A71C /* MainTabBar.swift in Sources */,
+				D01029072497F550001C78BC /* HomeVC.swift in Sources */,
 				D0D57526244B796400C778C2 /* AppDelegate.swift in Sources */,
 				D071E0AC244C76BA00A29DED /* Extenstion.swift in Sources */,
 				D0967242244CE8D400EE9B36 /* ApiClient.swift in Sources */,
 				D071E0AA244C721000A29DED /* constants.swift in Sources */,
 				D0855841249720340029E0C1 /* ChartsTrack.swift in Sources */,
 				D04769E7244E2F2600DFF368 /* String.swift in Sources */,
+				D010290924980CFD001C78BC /* Header.swift in Sources */,
 				D04555AC244CE56F00216870 /* ApiConfiguration.swift in Sources */,
 				D044EB0B24579140002CEBF9 /* PlayerDetailView.swift in Sources */,
 				D0967252244CFF4400EE9B36 /* ArtistModel.swift in Sources */,

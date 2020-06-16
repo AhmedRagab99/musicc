@@ -91,6 +91,7 @@ class MainTabBar:UITabBarController
     func setupViewControllers(){
         
         viewControllers = [
+            generateNavigationController(for: HomeVC(), title: "Home", image: #imageLiteral(resourceName: "music")),
             generateNavigationController(for: SearchTracks(), title: "Search", image: #imageLiteral(resourceName: "music")),
             generateNavigationController(for: SearchTracks(), title: "Artists", image: #imageLiteral(resourceName: "music")),
             generateNavigationController(for: ViewController(), title: "genere", image: #imageLiteral(resourceName: "music"))
