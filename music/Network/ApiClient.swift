@@ -31,7 +31,7 @@ class Api{
     
     func getTopChartsArtist(genreId:Int,onSuccess:@escaping(ArtistModel?,Error?)->Void){
            decoder.keyDecodingStrategy = .convertFromSnakeCase
-        AF.request("https://api.deezer.com/chart/\(genreId)/artists?limit=40").responseJSON { (response) in
+        AF.request("https://api.deezer.com/chart/\(genreId)/artists?limit=20").responseJSON { (response) in
             
             if response.error == nil{
                 do {
@@ -99,7 +99,7 @@ class Api{
     
     func getArtistTopTracks(artistId:Int,onSuccess:@escaping(SearchModel?,Error?)->Void){
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        AF.request("https://api.deezer.com/artist/\(artistId)/top?limit=50").responseJSON { (response) in
+        AF.request("https://api.deezer.com/artist/\(artistId)/top?limit=30").responseJSON { (response) in
             if response.error == nil{
                 do {
                     guard let data = response.data else {fatalError("data error")}

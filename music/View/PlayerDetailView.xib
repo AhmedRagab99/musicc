@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -91,19 +91,24 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ec0-xD-GlO">
-                    <rect key="frame" x="12" y="52" width="390" height="798"/>
+                    <rect key="frame" x="12" y="60" width="390" height="790"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riS-8M-Xab">
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="p0A-Sa-mQR">
                             <rect key="frame" x="0.0" y="0.0" width="390" height="24"/>
-                            <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <state key="normal" image="chevron.down" catalog="system">
-                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
-                            </state>
-                            <connections>
-                                <action selector="handleDismis:" destination="-1" eventType="touchUpInside" id="8Ea-dJ-u2p"/>
-                            </connections>
-                        </button>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riS-8M-Xab">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="24"/>
+                                    <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <state key="normal" image="chevron.down" catalog="system">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="handleDismis:" destination="-1" eventType="touchUpInside" id="8Ea-dJ-u2p"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nPZ-dA-goG">
                             <rect key="frame" x="0.0" y="29" width="390" height="383"/>
                             <subviews>
@@ -166,7 +171,7 @@
                                 <constraint firstAttribute="height" constant="15" id="Dbf-f0-iRi"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGz-hS-LSF">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QGz-hS-LSF">
                             <rect key="frame" x="0.0" y="530" width="390" height="26.333333333333371"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="dAg-aO-Afo"/>
@@ -176,31 +181,31 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="90H-m9-r5t">
-                            <rect key="frame" x="0.0" y="561.33333333333337" width="390" height="197.66666666666663"/>
+                            <rect key="frame" x="0.0" y="561.33333333333337" width="390" height="189.66666666666663"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ssA-fT-7sb">
-                                    <rect key="frame" x="0.0" y="9" width="25" height="180"/>
+                                    <rect key="frame" x="0.0" y="5" width="25" height="180"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="25" id="BBN-nO-eZU"/>
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpE-Mp-Ha6">
-                                    <rect key="frame" x="28" y="84.333333333333258" width="34" height="29.333333333333329"/>
+                                    <rect key="frame" x="28" y="80.333333333333258" width="34" height="29.333333333333329"/>
                                     <color key="tintColor" red="0.97118204829999999" green="0.22219157219999999" blue="0.3586372733" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <state key="normal" image="heart" catalog="system">
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="28"/>
                                     </state>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FvE-q9-7d4">
-                                    <rect key="frame" x="65" y="9" width="25" height="180"/>
+                                    <rect key="frame" x="65" y="5" width="25" height="180"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="25" id="gpu-EJ-vGf"/>
                                     </constraints>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJS-2b-oG2">
-                                    <rect key="frame" x="92.666666666666671" y="77.333333333333258" width="41.000000000000014" height="43.333333333333343"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJS-2b-oG2">
+                                    <rect key="frame" x="92.666666666666671" y="73.333333333333258" width="41.000000000000014" height="43.333333333333343"/>
                                     <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <state key="normal" image="gobackward.10" catalog="system">
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="35"/>
@@ -210,28 +215,28 @@
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQg-nV-2RN">
-                                    <rect key="frame" x="136.66666666666666" y="9" width="25" height="180"/>
+                                    <rect key="frame" x="136.66666666666666" y="5" width="25" height="180"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="25" id="Lh4-HV-vEF"/>
                                     </constraints>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUH-Nw-Nbu">
-                                    <rect key="frame" x="164.66666666666666" y="67" width="58" height="64"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUH-Nw-Nbu">
+                                    <rect key="frame" x="164.66666666666666" y="63" width="58" height="64"/>
                                     <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <state key="normal" image="play.fill" catalog="system">
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50" scale="large" weight="bold"/>
                                     </state>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gY-qP-VUh">
-                                    <rect key="frame" x="225.66666666666666" y="9" width="25" height="180"/>
+                                    <rect key="frame" x="225.66666666666666" y="5" width="25" height="180"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="25" id="yLS-a3-Zoo"/>
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2R-3X-EVc">
-                                    <rect key="frame" x="253.66666666666669" y="77.333333333333258" width="41" height="43.333333333333343"/>
+                                    <rect key="frame" x="253.66666666666669" y="73.333333333333258" width="41" height="43.333333333333343"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <state key="normal" image="goforward.10" catalog="system">
@@ -242,14 +247,14 @@
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6T-kQ-Y06">
-                                    <rect key="frame" x="297.33333333333331" y="9" width="25" height="180"/>
+                                    <rect key="frame" x="297.33333333333331" y="5" width="25" height="180"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="25" id="Ouw-xc-knD"/>
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pz0-Rs-ZGp">
-                                    <rect key="frame" x="325.33333333333331" y="84" width="36.666666666666686" height="29.666666666666671"/>
+                                    <rect key="frame" x="325.33333333333331" y="80" width="36.666666666666686" height="29.666666666666671"/>
                                     <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" image="repeat.1" catalog="system">
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="28"/>
@@ -259,7 +264,7 @@
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewV-Dt-DBw">
-                                    <rect key="frame" x="365" y="9" width="25" height="180"/>
+                                    <rect key="frame" x="365" y="5" width="25" height="180"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="25" id="Bpe-2i-1N0"/>
@@ -268,7 +273,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="2.5" translatesAutoresizingMaskIntoConstraints="NO" id="V3m-Hw-yji">
-                            <rect key="frame" x="0.0" y="764" width="390" height="34"/>
+                            <rect key="frame" x="0.0" y="756" width="390" height="34"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GXt-pI-bKr">
                                     <rect key="frame" x="0.0" y="1.6666666666666625" width="34" height="31.000000000000007"/>
@@ -306,7 +311,7 @@
                 <constraint firstItem="kS6-Bd-6bB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9Kf-eP-TUT"/>
                 <constraint firstItem="Ec0-xD-GlO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="AQ9-rc-PD2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ec0-xD-GlO" secondAttribute="trailing" constant="12" id="Pf5-Lq-pWQ"/>
-                <constraint firstItem="Ec0-xD-GlO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="b4a-PC-XWN"/>
+                <constraint firstItem="Ec0-xD-GlO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="b4a-PC-XWN"/>
                 <constraint firstItem="kS6-Bd-6bB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dFA-U8-WC9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kS6-Bd-6bB" secondAttribute="trailing" id="pQq-5f-3oT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ec0-xD-GlO" secondAttribute="bottom" constant="12" id="vvI-lD-036"/>

@@ -33,15 +33,22 @@ class PlayerDetailView: UIViewController {
         } else if gesture.state == .ended{
             
             handleEndState(gesture: gesture)
+            
         }
     }
     
     func handleChangeState(gesture:UIPanGestureRecognizer){
         let translation = gesture.translation(in: self.view.superview)
+        if (translation.y<=71){
         self.view.transform = CGAffineTransform(translationX: 0, y: translation.y)
-        
+        print(translation.y)
         self.miniplayerView.alpha = 1 + translation.y / 250
         self.maximizeStackView.alpha = -translation.y / 250
+        }
+        else{
+            dismiss(animated: true)
+        }
+       
     }
     
     func handleEndState(gesture:UIPanGestureRecognizer){
@@ -106,7 +113,12 @@ class PlayerDetailView: UIViewController {
         player.play()
         playPauseButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
         miniPlayPauseButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
-        
+       
+        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: .main) { (_) in
+            self.player.pause()
+            self.playPauseButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
+            self.miniPlayPauseButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
+        }
         
     }
     
@@ -144,6 +156,11 @@ class PlayerDetailView: UIViewController {
         }
     }
     
+    @IBAction func dismisPlayerDetailView(_ sender: Any) {
+        
+    
+
+    }
     //mini player
     
     @IBOutlet weak var miniTrackImage: UIImageView!
@@ -210,9 +227,12 @@ class PlayerDetailView: UIViewController {
                 NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: .main) { (_) in
                            self.player.seek(to: CMTime.zero)
                            self.player.play()
+                    self.playPauseButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+                    self.miniPlayPauseButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
                        }
                 sender.tintColor = .systemPink
                
+                          
             } else {
                 sender.tintColor = .systemGray
 

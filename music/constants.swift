@@ -21,6 +21,7 @@ struct XIBS{
     static let PlayerDetailView = "PlayerDetailView"
     static let ArtistDetailVC  = "ChartsTrack"
     static let ArtistCell = "ArtistCell"
+    static let ArtistTracksVC = "ArtistTracksVC"
 }
 
 

@@ -30,6 +30,8 @@
 		D0967256244D060B00EE9B36 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0967255244D060B00EE9B36 /* User.swift */; };
 		D09786FD244F3B5A00F49B26 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09786FB244F3B5A00F49B26 /* SearchCell.swift */; };
 		D09786FE244F3B5A00F49B26 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D09786FC244F3B5A00F49B26 /* SearchCell.xib */; };
+		D0CFEC422499C9ED00A6ACF3 /* ArtistTracksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFEC402499C9ED00A6ACF3 /* ArtistTracksVC.swift */; };
+		D0CFEC432499C9ED00A6ACF3 /* ArtistTracksVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CFEC412499C9ED00A6ACF3 /* ArtistTracksVC.xib */; };
 		D0D57526244B796400C778C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D57525244B796400C778C2 /* AppDelegate.swift */; };
 		D0D57528244B796400C778C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D57527244B796400C778C2 /* SceneDelegate.swift */; };
 		D0D5752A244B796400C778C2 /* SearchTracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D57529244B796400C778C2 /* SearchTracks.swift */; };
@@ -64,6 +66,8 @@
 		D0967255244D060B00EE9B36 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D09786FB244F3B5A00F49B26 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		D09786FC244F3B5A00F49B26 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		D0CFEC402499C9ED00A6ACF3 /* ArtistTracksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTracksVC.swift; sourceTree = "<group>"; };
+		D0CFEC412499C9ED00A6ACF3 /* ArtistTracksVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistTracksVC.xib; sourceTree = "<group>"; };
 		D0D57522244B796400C778C2 /* music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = music.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D57525244B796400C778C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0D57527244B796400C778C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 				D0855840249720340029E0C1 /* ChartsTrack.swift */,
 				D010290824980CFD001C78BC /* Header.swift */,
 				D0458D8F2459A472005735FB /* allGenereCell.swift */,
+				D0CFEC402499C9ED00A6ACF3 /* ArtistTracksVC.swift */,
+				D0CFEC412499C9ED00A6ACF3 /* ArtistTracksVC.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -262,6 +268,7 @@
 				D085583F24971E9F0029E0C1 /* ChartsTrack.xib in Resources */,
 				D09786FE244F3B5A00F49B26 /* SearchCell.xib in Resources */,
 				D0D5752F244B796900C778C2 /* Assets.xcassets in Resources */,
+				D0CFEC432499C9ED00A6ACF3 /* ArtistTracksVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +344,7 @@
 				D0967254244D043300EE9B36 /* GenreModel.swift in Sources */,
 				D0D57528244B796400C778C2 /* SceneDelegate.swift in Sources */,
 				D04555AE244CE65900216870 /* ApiRouter.swift in Sources */,
+				D0CFEC422499C9ED00A6ACF3 /* ArtistTracksVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +482,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Z6V95G685;
 				INFOPLIST_FILE = music/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -482,7 +491,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmed.Ragab.music;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -492,6 +501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Z6V95G685;
 				INFOPLIST_FILE = music/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -500,7 +510,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmed.Ragab.music;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
