@@ -17,8 +17,47 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
+           window?.makeKeyAndVisible()
+        window?.rootViewController = MainTabBar()
+     
+
     }
+    
+    
+    func createSearchNC() -> UINavigationController {
+        let searchVC        = SearchTracks()
+        searchVC.title      = "Search"
+        searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
+        
+        let nav = UINavigationController(rootViewController: searchVC)
+        nav.navigationBar.prefersLargeTitles = true
+        return nav
+    }
+    
+    
+    func createFavoritesNC() -> UINavigationController {
+        let favoritesListVC         = ViewController()
+        favoritesListVC.title       = "Artists"
+        
+        favoritesListVC.tabBarItem  = UITabBarItem(tabBarSystemItem: .recents, tag: 0)
+        
+        let nav = UINavigationController(rootViewController: favoritesListVC)
+               return nav
+    }
+    
+    
+    func createTabbar() -> UITabBarController {
+        let tabbar                      = UITabBarController()
+        UITabBar.appearance().tintColor = .systemPink
+        tabbar.viewControllers          = [createSearchNC(), createFavoritesNC()]
+        
+        return tabbar
+    }
+    
+    
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
