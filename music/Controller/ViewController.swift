@@ -32,7 +32,7 @@ class ViewController : UIViewController {
             if err == nil {
                 Api.shared.getArtistTopTracks(artistId: artist?.data?[0].id ?? 58888922) { (track, error) in
                     if(error == nil ){
-                        print(track)
+                       // print(track)
                     }
                 }
             }

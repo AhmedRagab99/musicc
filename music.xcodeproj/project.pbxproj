@@ -30,6 +30,8 @@
 		D0967256244D060B00EE9B36 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0967255244D060B00EE9B36 /* User.swift */; };
 		D09786FD244F3B5A00F49B26 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09786FB244F3B5A00F49B26 /* SearchCell.swift */; };
 		D09786FE244F3B5A00F49B26 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D09786FC244F3B5A00F49B26 /* SearchCell.xib */; };
+		D0BAFAD6249AC9540054B9C9 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAFAD4249AC9540054B9C9 /* ProfileVC.swift */; };
+		D0BAFAD7249AC9540054B9C9 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0BAFAD5249AC9540054B9C9 /* ProfileVC.xib */; };
 		D0CFEC422499C9ED00A6ACF3 /* ArtistTracksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFEC402499C9ED00A6ACF3 /* ArtistTracksVC.swift */; };
 		D0CFEC432499C9ED00A6ACF3 /* ArtistTracksVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CFEC412499C9ED00A6ACF3 /* ArtistTracksVC.xib */; };
 		D0D57526244B796400C778C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D57525244B796400C778C2 /* AppDelegate.swift */; };
@@ -66,6 +68,8 @@
 		D0967255244D060B00EE9B36 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D09786FB244F3B5A00F49B26 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		D09786FC244F3B5A00F49B26 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		D0BAFAD4249AC9540054B9C9 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		D0BAFAD5249AC9540054B9C9 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		D0CFEC402499C9ED00A6ACF3 /* ArtistTracksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTracksVC.swift; sourceTree = "<group>"; };
 		D0CFEC412499C9ED00A6ACF3 /* ArtistTracksVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistTracksVC.xib; sourceTree = "<group>"; };
 		D0D57522244B796400C778C2 /* music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = music.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +97,10 @@
 		D042E8872458FD5E00ABD3F1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D0CFEC402499C9ED00A6ACF3 /* ArtistTracksVC.swift */,
+				D044EB0924579140002CEBF9 /* PlayerDetailView.swift */,
+				D0855840249720340029E0C1 /* ChartsTrack.swift */,
+				D0BAFAD4249AC9540054B9C9 /* ProfileVC.swift */,
 				D042E88A2459020700ABD3F1 /* ViewController.swift */,
 				D047A64424574F470068A71C /* MainTabBar.swift */,
 				D0D57529244B796400C778C2 /* SearchTracks.swift */,
@@ -106,14 +114,12 @@
 			children = (
 				D09786FB244F3B5A00F49B26 /* SearchCell.swift */,
 				D09786FC244F3B5A00F49B26 /* SearchCell.xib */,
-				D044EB0924579140002CEBF9 /* PlayerDetailView.swift */,
 				D044EB0A24579140002CEBF9 /* PlayerDetailView.xib */,
 				D085583E24971E9F0029E0C1 /* ChartsTrack.xib */,
-				D0855840249720340029E0C1 /* ChartsTrack.swift */,
 				D010290824980CFD001C78BC /* Header.swift */,
 				D0458D8F2459A472005735FB /* allGenereCell.swift */,
-				D0CFEC402499C9ED00A6ACF3 /* ArtistTracksVC.swift */,
 				D0CFEC412499C9ED00A6ACF3 /* ArtistTracksVC.xib */,
+				D0BAFAD5249AC9540054B9C9 /* ProfileVC.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 				D0D57532244B796900C778C2 /* LaunchScreen.storyboard in Resources */,
 				D085583F24971E9F0029E0C1 /* ChartsTrack.xib in Resources */,
 				D09786FE244F3B5A00F49B26 /* SearchCell.xib in Resources */,
+				D0BAFAD7249AC9540054B9C9 /* ProfileVC.xib in Resources */,
 				D0D5752F244B796900C778C2 /* Assets.xcassets in Resources */,
 				D0CFEC432499C9ED00A6ACF3 /* ArtistTracksVC.xib in Resources */,
 			);
@@ -326,6 +333,7 @@
 				D0967256244D060B00EE9B36 /* User.swift in Sources */,
 				D0D5752A244B796400C778C2 /* SearchTracks.swift in Sources */,
 				D042E88B2459020700ABD3F1 /* ViewController.swift in Sources */,
+				D0BAFAD6249AC9540054B9C9 /* ProfileVC.swift in Sources */,
 				D09786FD244F3B5A00F49B26 /* SearchCell.swift in Sources */,
 				D0FDE938244E07810083505E /* SearchModel.swift in Sources */,
 				D0967250244CFAB100EE9B36 /* AlbumModel.swift in Sources */,

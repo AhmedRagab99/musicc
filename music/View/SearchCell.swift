@@ -36,6 +36,7 @@ class SearchCell: UITableViewCell {
       }
     
     
+    
     var album:SearchDatum?{
         didSet{
             self.trackTitle.text = album?.album?.title ?? ""
@@ -46,6 +47,20 @@ class SearchCell: UITableViewCell {
               if let url = URL(string: urlString){
                   trackImage.kf.indicatorType = .activity
                   let options : KingfisherOptionsInfo = [KingfisherOptionsInfoItem.transition(.fade(0.4))]
+                  trackImage.kf.setImage(with: .network(url), options: options)
+              }
+        }
+    }
+    
+    
+    var artist:Artist?{
+        didSet{
+            self.trackTitle.text = artist?.name ?? ""
+              self.trackTitle.textColor = .label
+            let urlString =  artist?.picture ?? ""
+              if let url = URL(string: urlString){
+                  trackImage.kf.indicatorType = .activity
+                let options : KingfisherOptionsInfo = [KingfisherOptionsInfoItem.transition(.fade(0.3))]
                   trackImage.kf.setImage(with: .network(url), options: options)
               }
         }

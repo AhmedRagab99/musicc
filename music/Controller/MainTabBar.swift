@@ -91,10 +91,10 @@ class MainTabBar:UITabBarController
     func setupViewControllers(){
         
         viewControllers = [
-            generateNavigationController(for: HomeVC(), title: "Home", image: #imageLiteral(resourceName: "music")),
-            generateNavigationController(for: SearchTracks(), title: "Search", image: #imageLiteral(resourceName: "music")),
-            generateNavigationController(for: SearchTracks(), title: "Artists", image: #imageLiteral(resourceName: "music")),
-            generateNavigationController(for: ViewController(), title: "genere", image: #imageLiteral(resourceName: "music"))
+            generateNavigationController(for: HomeVC(), title: "Artists", image: #imageLiteral(resourceName: "dj")),
+            generateNavigationController(for: SearchTracks(), title: "Search", image: #imageLiteral(resourceName: "search")),
+            generateNavigationController(for: ViewController(), title: "genre", image: #imageLiteral(resourceName: "dj (1)")),
+             generateNavigationController(for: ProfileVC(), title: "Profile", image: #imageLiteral(resourceName: "user"))
         ]
     }
     
@@ -102,7 +102,13 @@ class MainTabBar:UITabBarController
     fileprivate func generateNavigationController (for rootViewController: UIViewController, title: String, image: UIImage)->UIViewController{
         
         let navController = UINavigationController(rootViewController: rootViewController)
+        if title == "Profile"{
+            rootViewController.navigationItem.title = ""
+
+        }
+        else{
         rootViewController.navigationItem.title = title
+        }
         navController.tabBarItem.title = title
         navController.tabBarItem.image = image
         UINavigationBar.appearance().tintColor = .systemPink

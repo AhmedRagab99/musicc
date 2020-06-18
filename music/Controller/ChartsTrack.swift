@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import MBProgressHUD
 
 class ChartsTrack: UIViewController {
     
@@ -37,6 +38,18 @@ class ChartsTrack: UIViewController {
     }
     
     
+    func showIndicator(withTitle title: String, and Description:String) {
+        let Indicator = MBProgressHUD.showAdded(to: self.view, animated: true)
+        Indicator.label.text = title
+        Indicator.isUserInteractionEnabled = false
+        Indicator.detailsLabel.text = Description
+        Indicator.show(animated: true)
+    }
+    
+    func hideIndicator() {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
+    
     
     
     fileprivate func setupTableView(){
@@ -46,11 +59,11 @@ class ChartsTrack: UIViewController {
     }
     
     fileprivate func fetchCharts(genereId:Int){
+        
         Api.shared.getTopCharts(genreId: genereId) { [weak self](chart, error) in
             guard let self = self else{return}
             self.topTracks = chart?.data
             self.tableView.reloadData()
-            print(self.topTracks)
             //  print(self.topTracks?[2].artist?.picture)
         }
     }

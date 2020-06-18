@@ -23,12 +23,10 @@ class SearchTracks: UITableViewController,UISearchBarDelegate {
         super.viewDidLoad()
         setupNavBar()
         setupTableView()
-       fetchTracks(searchTerm: "sia")
+            //fetchTracks(searchTerm: "")
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //        self.tableView.estimatedRowHeight =
-        //        self.tableView.rowHeight = UITableView.automaticDimension
     }
     
     
