@@ -34,7 +34,16 @@ listen for the artist tracks, search for tracks, show the top tracks for specifi
  
 # screen shots
 
-<img src="https://user-images.githubusercontent.com/47069606/85061954-f79ae600-b1a7-11ea-838d-7d1266041ad5.png" width="100" height="100">
+  <img src="https://user-images.githubusercontent.com/47069606/85061954-f79ae600-b1a7-11ea-838d-7d1266041ad5.png" width="250" height="500"> <img src="https://user-images.githubusercontent.com/47069606/85061966-fd90c700-b1a7-11ea-88f1-d6249348f746.png" width="250" height="500"> <img src="https://user-images.githubusercontent.com/47069606/85061980-0386a800-b1a8-11ea-8497-3a2dafca5a03.png" width="250" height="500">
+  <img src="https://user-images.githubusercontent.com/47069606/85061989-084b5c00-b1a8-11ea-925d-a1809e47ceb0.png" width="250" height="500">
+   <img src="https://user-images.githubusercontent.com/47069606/85061994-0b464c80-b1a8-11ea-91f3-170b09d988ee.png" width="250" height="500">
+      <img src="https://user-images.githubusercontent.com/47069606/85061997-0c777980-b1a8-11ea-958c-75f5ce49464b.png" width="250" height="500">
+       <img src="https://user-images.githubusercontent.com/47069606/85062007-0f726a00-b1a8-11ea-9a1a-dfeed4c7bf45.png" width="250" height="500">
+       <img src="https://user-images.githubusercontent.com/47069606/85062020-14cfb480-b1a8-11ea-88aa-76f19bf16259.png" width="250" height="500">
+        <img src="https://user-images.githubusercontent.com/47069606/85061993-0a151f80-b1a8-11ea-9596-122355066b91.png" width="250" height="500">
+       
+       
+       
  
  
 
