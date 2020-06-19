@@ -10,10 +10,10 @@ listen for the artist tracks, search for tracks, show the top tracks for specifi
 
 
 # app structure
- app use mvc strucure.
- 1- bulid a network layer with Alamofire with api router protocol
- 2- uses AVKit for audio files and notification center observers to handle repeat
- 3- UI for app is UIKIT the app build with a compination of pure code with xibs files
+ app use mvc strucure.<br>
+ 1- bulid a network layer with Alamofire with api router protocol.<br>
+ 2- uses AVKit for audio files and notification center observers to handle repeat.<br>
+ 3- UI for app is UIKIT the app build with a compination of pure code with xibs files.<br>
  
  
  # tools and Pods
@@ -24,7 +24,7 @@ listen for the artist tracks, search for tracks, show the top tracks for specifi
  
  
  
- # usage
+ # how to use
  clone the master branch and open terminal and type 
  pod install
  open xworkspace file 
