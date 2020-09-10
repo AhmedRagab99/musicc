@@ -11,6 +11,10 @@
 musico is music app buitl with avkit with the ability to listen the music with the song for the most famous artists and search for your favoirite songs from deezer api
 ![](header.png)
 
+
+## 📱 Screenshots en shots
+ <img src="https://user-images.githubusercontent.com/47069606/85061954-f79ae600-b1a7-11ea-838d-7d1266041ad5.png" width="250" height="500"> <img src="https://user-images.githubusercontent.com/47069606/85061966-fd90c700-b1a7-11ea-88f1-d6249348f746.png" width="250" height="500"> <img src="https://user-images.githubusercontent.com/47069606/85061980-0386a800-b1a8-11ea-8497-3a2dafca5a03.png" width="250" height="500"><img src="https://user-images.githubusercontent.com/47069606/85061989-084b5c00-b1a8-11ea-925d-a1809e47ceb0.png" width="250" height="500"><img src="https://user-images.githubusercontent.com/47069606/85061994-0b464c80-b1a8-11ea-91f3-170b09d988ee.png" width="250" height="500"><img src="https://user-images.githubusercontent.com/47069606/85061997-0c777980-b1a8-11ea-958c-75f5ce49464b.png" width="250" height="500"><img src="https://user-images.githubusercontent.com/47069606/85062007-0f726a00-b1a8-11ea-9a1a-dfeed4c7bf45.png" width="250" height="500"><img src="https://user-images.githubusercontent.com/47069606/85062020-14cfb480-b1a8-11ea-88aa-76f19bf16259.png" width="250" height="500"> <img src="https://user-images.githubusercontent.com/47069606/85061993-0a151f80-b1a8-11ea-9596-122355066b91.png" width="250" height="500">
+
 ## Features
 - [1] search for songs
 - [2] listen for music with the ability to change sound 
@@ -22,37 +26,37 @@ musico is music app buitl with avkit with the ability to listen the music with t
 
 ## Requirements
 
-- iOS 14.0
-- Xcode 12 beta
+- iOS 13.0
+- Xcode 11
 
 ## libraries
 
 ``` swift
 pod 'Alamofire'
-pod 'SDWebImageSwiftUI'
+pod 'Kingfisher'
+pod 'MBProgressHUD'
 pod 'lottie-ios'
 ```
 ## ⚡ Technologies
-- back-end integration using RestApi
 - Alamoofire Network layer
-- Alamofire interceptor for Tokens
-- MVVM pattern
-- swiftui2.0 grids,widgets
-- UserDefaults for save userdata
-- UIKit components 
-- lottie Animation
--  user authrization and Auth
+- MVC pattern
+- AVKIT
+- collection view compostional layout
+- xibs files 
+- layout with code
+
+## Contribute
+
+I would love you for the contribution to musico, just fork the repo and feel free to use it
+
+## Resources
+- [Create full Network layer with Alamofire](https://www.youtube.com/watch?v=bOg6HIX1zPo)
+- [AVKIT with local audio](https://www.youtube.com/watch?v=PilNQ2TkwGw)
+- [collection view compostional layout](https://www.youtube.com/watch?v=y1uXXVUu43o)
+
+
  
-# screen shots
- <img src="https://user-images.githubusercontent.com/47069606/85061954-f79ae600-b1a7-11ea-838d-7d1266041ad5.png" width="150" height="200"> 
-<img src="https://user-images.githubusercontent.com/47069606/85061966-fd90c700-b1a7-11ea-88f1-d6249348f746.png" width="250" height="500">
- <img src="https://user-images.githubusercontent.com/47069606/85061980-0386a800-b1a8-11ea-8497-3a2dafca5a03.png" width="250" height="500">
-  <img src="https://user-images.githubusercontent.com/47069606/85061989-084b5c00-b1a8-11ea-925d-a1809e47ceb0.png" width="250" height="500">
-   <img src="https://user-images.githubusercontent.com/47069606/85061994-0b464c80-b1a8-11ea-91f3-170b09d988ee.png" width="250" height="500">
-      <img src="https://user-images.githubusercontent.com/47069606/85061997-0c777980-b1a8-11ea-958c-75f5ce49464b.png" width="250" height="500">
-       <img src="https://user-images.githubusercontent.com/47069606/85062007-0f726a00-b1a8-11ea-9a1a-dfeed4c7bf45.png" width="250" height="500">
-       <img src="https://user-images.githubusercontent.com/47069606/85062020-14cfb480-b1a8-11ea-88aa-76f19bf16259.png" width="250" height="500">
-        <img src="https://user-images.githubusercontent.com/47069606/85061993-0a151f80-b1a8-11ea-9596-122355066b91.png" width="250" height="500">
+
        
        
        
