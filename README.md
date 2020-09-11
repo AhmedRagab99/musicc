@@ -47,7 +47,7 @@ pod 'lottie-ios'
 
 ## Contribute
 
-I would love you for the contribution to musico, just fork the repo and feel free to use it
+I would appreciate the contribution for  musico, just fork the repo and feel free to use it
 
 ## Resources
 - [Create full Network layer with Alamofire](https://www.youtube.com/watch?v=bOg6HIX1zPo)
